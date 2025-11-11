@@ -37,6 +37,20 @@ ChromeDriver driver = new ChromeDriver();
      String ExpetedError = "Epic sadface: Username and password do not match any user in this service";
      Assert.assertEquals(ActualError,ExpetedError,"Error message mismatch!");
  }
+  @Test
+  void TC003()
+  {
+      driver.findElement(By.id("login-button")).click();
+
+   String ActualError =  driver.findElement(By.cssSelector("h3[data-test=\"error\"]")).getText();
+   String ExpectedError = "Epic sadface: Username is required";
+   Assert.assertEquals(ActualError,ExpectedError,"Error message mismatch!");
+  }
+
+
+
+
+
 @AfterTest
     void  close()
   {
