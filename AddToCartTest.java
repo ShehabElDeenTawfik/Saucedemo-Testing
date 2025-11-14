@@ -22,7 +22,9 @@ public class AddToCartTest {
         try {
             driver.switchTo().alert().accept();
             System.out.println("Alert acceted");
-        } catch (NoAlertPresentException e) {
+        }
+        catch (NoAlertPresentException e)
+        {
             System.out.println("No alert present");
 
         }
